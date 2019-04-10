@@ -20,12 +20,12 @@ var queueMethods = {};
 queueMethods.enqueue = function(str) {
   this.storage[this.index] = str;
   this.index++;
-}
+};
 
 queueMethods.dequeue = function() {
   try {
     if (this.size() === 0) {
-      throw "Can't dequeue an empty queue";
+      throw 'Can\'t dequeue an empty queue';
     } else {
       
       var temp = this.storage[this.back];
@@ -36,10 +36,10 @@ queueMethods.dequeue = function() {
   } catch (e) {
     console.log(e);
   }
-}
+};
 
 queueMethods.size = function() {
   return Object.keys(this.storage).length;
-}
+};
 
 
