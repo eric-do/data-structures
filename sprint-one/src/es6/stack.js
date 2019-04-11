@@ -15,7 +15,7 @@ class Stack {
         throw 'Can\'t pop an empty stack';
       } else {
         var temp = this.storage[this.index - 1];
-        delete this.storage[this.index - 1]
+        delete this.storage[this.index - 1];
         this.index--;
         return temp;
       }
