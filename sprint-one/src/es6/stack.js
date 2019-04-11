@@ -1,7 +1,30 @@
 class Stack {
-  // Hey! Rewrite in the new style. Your code will wind up looking very similar,
-  // but try not not reference your old code in writing the new style.
   constructor() {
+    this.index = 0;
+    this.storage = {};
   }
 
+  push(str) {
+    this.storage[this.index] = str;
+    this.index++;
+  }
+
+  pop() {
+    try {
+      if (this.size() === 0) {
+        throw 'Can\'t pop an empty stack';
+      } else {
+        var temp = this.storage[this.index - 1];
+        delete this.storage[this.index - 1]
+        this.index--;
+        return temp;
+      }
+    } catch (e) {
+      console.log(e);
+    }
+  }
+
+  size() {
+    return Object.keys(this.storage).length;
+  }
 }
