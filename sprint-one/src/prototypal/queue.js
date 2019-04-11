@@ -9,7 +9,7 @@ var Queue = function() {
 
 var queueMethods = {};
 
-queueMethods.queue = function(str) {  
+queueMethods.enqueue = function(str) {  
   this.storage[this.index] = str;
   this.index++;
 };

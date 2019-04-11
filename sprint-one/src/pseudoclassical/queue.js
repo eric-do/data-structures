@@ -4,7 +4,7 @@ var Queue = function() {
   this.back = 0;
 };
 
-Queue.prototype.queue = function(str) {  
+Queue.prototype.enqueue = function(str) {  
   this.storage[this.index] = str;
   this.index++;
 };

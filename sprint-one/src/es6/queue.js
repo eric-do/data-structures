@@ -1,17 +1,16 @@
 class Queue {
   constructor() {
-    debugger;
     this.index = 0;
     this.back = 0;
     this.storage = {};
   }
 
-  queue(str) {
+  enqueue(str) {
     this.storage[this.index] = str;
     this.index++;
   }
 
-  enqueue() {
+  dequeue() {
     try {
       if (this.size() === 0) {
         throw 'Can\'t dequeue an empty queue';
