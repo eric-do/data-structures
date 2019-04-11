@@ -1,7 +1,32 @@
 class Queue {
-  // Hey! Rewrite in the new style. Your code will wind up looking very similar,
-  // but try not not reference your old code in writing the new style.
   constructor() {
+    debugger;
+    this.index = 0;
+    this.back = 0;
+    this.storage = {};
   }
 
+  queue(str) {
+    this.storage[this.index] = str;
+    this.index++;
+  }
+
+  enqueue() {
+    try {
+      if (this.size() === 0) {
+        throw 'Can\'t dequeue an empty queue';
+      } else {
+        var temp = this.storage[this.back];
+        delete this.storage[this.back];
+        this.back++;
+        return temp;
+      }
+    } catch (e) {
+      console.log(e);
+    }
+  }
+
+  size() {
+    return Object.keys(this.storage).length;
+  }
 }
