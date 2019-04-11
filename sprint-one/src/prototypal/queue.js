@@ -1,6 +1,6 @@
 var Queue = function() {
   var obj = Object.create(queueMethods);
-  obj.back =  0;
+  obj.back = 0;
   obj.index = 0;
   obj.storage = {};
 
@@ -21,7 +21,7 @@ queueMethods.dequeue = function() {
     } else {
       var temp = this.storage[this.back];
       delete this.storage[this.back];
-      this.back++
+      this.back++;
       return temp;
     }
   } catch (e) {

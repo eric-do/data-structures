@@ -16,7 +16,7 @@ Queue.prototype.dequeue = function() {
     } else {
       var temp = this.storage[this.back];
       delete this.storage[this.back];
-      this.back++
+      this.back++;
       return temp;
     }
   } catch (e) {
