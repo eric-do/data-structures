@@ -11,7 +11,7 @@ var stackMethods = {};
 stackMethods.push = function(str) {
   this.storage[this.index] = str;
   this.index++;
-}
+};
 
 stackMethods.pop = function() {
   try {
@@ -26,8 +26,8 @@ stackMethods.pop = function() {
   } catch (e) {
     console.log(e);
   }
-}
+};
 
 stackMethods.size = function() {
   return Object.keys(this.storage).length;
-}
+};
